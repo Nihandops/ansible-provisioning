@@ -1,0 +1,12 @@
+region: "us-east-1"
+vpc_cidr_block: "10.0.0.0/16"
+vpc_name: "my-vpc"
+igw_name: "my-igw"
+pubsubnet_cidr_block: "10.0.1.0/24"
+pubsubnet_name: "public-subnet"
+pvtzone: "us-east-1a"
+pubroute_table_name: "public-route-table"
+security_group_name: "my-security-group"
+image_id: "ami-0abcdef1234567890"  # Replace with your desired AMI ID
+instance_type: "t2.micro"  # You can change this based on your requirements
+root@ip-172-31-80-196:~/ansible-setup#
