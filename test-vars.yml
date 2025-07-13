@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Show AWS region
+      debug:
+        msg: "AWS Region is {{ region }}"
+

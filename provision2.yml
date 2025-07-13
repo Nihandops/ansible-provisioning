@@ -1,0 +1,16 @@
+- name: Launch EC2 Instance
+      amazon.aws.ec2:
+        aws_access_key: "{{ aws_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
+        image: "{{ image_id }}"
+        instance_type: "{{ instance_type }}"
+        region: "{{ region }}"
+        wait: yes
+        count: 1
+        state: present
+        vpc_subnet_id: "{{ pubsubnet_result.subnet.id }}"
+        assign_public_ip: yes
+        group_id: "{{ security_group_results.group_id }}"
+        instance_tags:
+          Name: "My-Ansible-VM"
+      register: ec2_instance
